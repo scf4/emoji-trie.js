@@ -1,6 +1,6 @@
 {
   "name": "emoji-trie",
-  "version": "0.14.0",
+  "version": "0.14.1",
   "main": "build/index.js",
   "repository": "https://github.com/scf4/emoji-trie.js",
   "license": "MIT",
