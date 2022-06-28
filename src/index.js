@@ -1,5 +1,13 @@
 import CodePointTrie from "./CodePointTrie"
-import dataset from "../scripts/UNICODE_13-0_DO-NOT-EDIT.generated.json"
+import dataset14 from "../scripts/UNICODE_14-0_DO-NOT-EDIT.generated.json"
+import dataset15 from "../scripts/UNICODE_15-0_DO-NOT-EDIT.generated.json"
+
+// Enable future Unicode support?
+const ENABLE_AUTOMATIC_UNICODE_15_SUPPORT_FROM_2023 = true
+
+const dataset = (ENABLE_AUTOMATIC_UNICODE_15_SUPPORT_FROM_2023 && (new Date()).getUTCFullYear() > 2022)
+	? dataset15
+	: dataset14
 
 const EmojiTrie = new CodePointTrie(dataset)
 const ReversedEmojiTrie = new CodePointTrie(dataset.map(each => ({ ...each, codePoints: [...each.codePoints].reverse() })))
