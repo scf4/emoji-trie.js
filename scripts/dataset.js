@@ -3,7 +3,7 @@ const fetch = require("node-fetch")
 const fs = require("fs")
 
 // Update as needed:
-const VERSION = "13.0" // 2020-01-21
+const VERSION = "15.0" // 2020-01-21
 const URL = `https://unicode.org/Public/emoji/${VERSION}/emoji-test.txt`
 
 ;(async function main() {
